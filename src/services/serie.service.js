@@ -8,14 +8,14 @@ class SerieService {
 	async listSeries() {
 		return new Promise((resolve, reject) => {
 			setTimeout(() => resolve(serieSchema.find()), 3000);
-		})
+		});
 	}
 
-	showSerie(serieId) {
+	async showSerie(serieId) {
 		return serieSchema.findById({ _id: serieId });
 	}
 
-	editSerie(
+	async editSerie(
 		serieID,
 		serie,
 		number_episodes,
@@ -30,7 +30,7 @@ class SerieService {
 		});
 	}
 
-	removeSerie(serieId) {
+	async removeSerie(serieId) {
 		const serieRemove = serieSchema.findById({ _id: serieId });
 		serieSchema.deleteOne(serieRemove);
 	}
