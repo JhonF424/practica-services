@@ -1,0 +1,21 @@
+###
+
+POST http://localhost:5000/api/v2/series/serie
+
+Content-Type: application/json
+
+{
+    "serie": "Serie1",
+    "number_episodes": 24,
+    "number_seasons": 2,
+    "description": "Content",
+
+}
+###
+GET http://localhost:5000/api/v2/series/
+
+###
+GET http://localhost:5000/api/v2/series/12312312
+
+###
+DELETE http://localhost:5000/api/v2/series
