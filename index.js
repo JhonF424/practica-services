@@ -14,6 +14,6 @@ app.listen(port, () => {
 })
 
 mongoose
-    .connect(process.env.MONGODB_CONNECTION_STRING)
+    .connect(process.env.CONNECTION_STRING_MONGODB)
     .then(() => console.log())
     .catch((err) => console.error(err))
