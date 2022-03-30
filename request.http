@@ -10,7 +10,13 @@ Content-Type: application/json
 
 }
 ###
-GET http://localhost:5000/api/v2/series/
+GET http://localhost:5000/api/v2/series/ HTTP/1.1
+Content-Type: application/json
+
+
+###
+GET http://localhost:5000/ HTTP/1.1
+
 
 ###
 GET http://localhost:5000/api/v2/series/12312312

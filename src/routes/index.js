@@ -1,5 +1,6 @@
 const express = require('express');
-const seriesRoutes = require('../routes/series.routes')
+const seriesRoutes = require('./series.routes');
+
 function routerApi(app) {
     const router = express.Router();
     app.use('/api/v2', router);

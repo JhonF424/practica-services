@@ -1,7 +1,9 @@
 const SerieService = require('../services/serie.service');
 const service = new SerieService();
+const routerApi = require('.');
 const express = require('express');
 const serieModel = require('../models/serie.model');
+//const router = express.Router();
 const serieRoutes = express.Router();
 
 serieRoutes.post('/serie', async (req, res) => {
@@ -51,7 +53,7 @@ serieRoutes.delete('/:serieId', async (req, res) => {
     try {
         const { serieId } = req.params;
         const data = await service.removeSerie(serieId)
-        res.status(200).json({ message: error })
+        res.status(200).json({ data })
     } catch (error) {
         res.status(204).json({ message: error })
     }

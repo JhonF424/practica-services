@@ -13,7 +13,10 @@ app.listen(port, () => {
     console.log("Active port", port);
 })
 
+
 mongoose
     .connect(process.env.CONNECTION_STRING_MONGODB)
-    .then(() => console.log())
+    .then(() => console.log("Connected with Mongo"))
     .catch((err) => console.error(err))
+
+module.exports = routerApi;
